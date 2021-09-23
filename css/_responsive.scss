@@ -1,0 +1,21 @@
+@media only screen and (max-width: 880px) {
+    #contact{display: none;}
+    .container{
+        height: auto;
+        width: 90%;
+    }
+    #flex-main{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    #mds{
+        #main-links{
+            margin-bottom: 2rem;
+        }
+    }
+    #grid-main{
+        display: block;
+        margin: 1rem 0 !important;
+    }
+}
