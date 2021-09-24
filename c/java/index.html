@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="shortcut icon" href="../../img/fav-icon-tn.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/index.css">
+    <title>Master Data Science | ISLAIB</title>
+</head>
+<body>
+    <div class="container">
+        <div id="list-courses"></div>
+        <!-- end of container -->
+    </div>
+
+    <script>
+        const display = document.querySelector('#list-courses')
+        const prefix = "<span style='color: #303030;'>JAVA - </span>"
+        const links = [
+            {
+                'title':'',
+                'link':'',
+                'new': 'no'
+            }
+        ]
+        const renderCourses = (p, t, l, latest) =>{
+            if (latest == 'yes') {
+                return `
+                    <a href=${l} target='_blank'>${p}${t} <span style="color:red; font-weight:bold;">[ NEW ]</span></a><br>
+                `
+            } else{
+                return `
+                    <a href=${l} target='_blank'>${p}${t}</a><br>
+                `
+            }
+        }
+        links.forEach(c=>{
+            display.innerHTML += renderCourses(prefix, c.title, c.link, c.new)
+        })
+    </script>
+</body>
+</html>
